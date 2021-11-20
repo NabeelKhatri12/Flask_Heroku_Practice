@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Brain Tumor Detection</title>
+    <link type="text/css" href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+	<style>
+		html {
+		  scroll-behavior: smooth;
+		}
+		
+		</style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+        <!-- <a class="navbar-brand" href="#">Cancer Predictor and Detector</a> -->
+        <a class="navbar-brand" href="#" style= "font-size:24px;">Brain Tumor Detection</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="./">Home <span class="sr-only">(current)</span></a>
+                </li>
+				<li class="nav-item">
+                    <a class="nav-link text-white" href="#team">Team </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+	
+	<div class="container mt-auto" style="padding-top: 2.5%;"> 
+		<div class = "row">
+			<div class="col-md-2 text-center"" style="padding-top: 1%;">
+				<img src= {{url_for('static', filename='logo.png')}} align = "middle" width = "150px" height = "150px">
+			</div>
+			<div class="container col-md-8" style="padding-top: 1%;">
+				<h3 class="text-center">Benazir Bhutto Shaheed University Lyari, Karachi</h3>
+				<h5 class="text-center">Faculty of Computer Science and Information Technology</h5>
+				<h5 class="text-center">FYP-Project</h5>
+				<h5 class="text-center">Brain Tumor Detection Through Artificial Intelligence</h5>
+			</div>
+			<div class="col-md-2 text-center"" style="padding-top: 1%;">
+				<img src= {{url_for('static', filename='BTD_COPY.jpeg')}} align = "middle" width = "150px" height = "150px">
+			</div>
+		</div>
+	</div>
+	
+	<div class="container mt-auto" style="padding-top: 2.5%;"> 
+		<div class = "row">
+			<div class="container col-md-2">
+			</div>
+			<div class="container col-md-8" style="padding-top: 1%;">
+				<h3 class="text-center">Welcome to the App</h3>
+				<p class="text-center">lorem32</p>
+			</div>
+			<div class="container col-md-2">
+			</div>
+		</div>
+	</div>	
+	
+    <div class="container mt-auto" style="padding-top: 1%;">
+
+        <form id="upload-form" action="http://localhost:5000/upload" method="post" enctype="multipart/form-data">
+            <div class="row mt-5">
+                <div class="col-md-2"></div>
+                <div class="col-md-8 justify-content-center center">
+
+                    <h3 class="display-5 text-center">Upload MRI image of Brain: </h3>
+                    <!-- <input id="file-picker" type="file" name="file" accept="image/*" multiple> -->
+                    <input id="file-picker" type="file" name="file" accept="image/*" class="file-control col-md-6 d-flex justify-content-center" style="display: block; margin-left: auto; margin-right: auto; width: 40%;" required>
+                    <div id="msg"></div>
+                    <div class="mt-5">
+                        <button type="submit" class="btn btn-danger btn-lg btn-block col-md-8 mr-auto ml-auto" id="upload-button">Check Tumor Status</button>
+                    </div>
+        </form>
+        </div>
+        <div class="col-md-2"></div>
+        </div>
+
+    </div>
+	
+	<div class="container-fluid bg-danger text-white" id="team" style="margin-left: 0%; margin-top: 2.5%; padding-top: 2.5%; padding-bottom: 2.5%;"> 
+		<div class="" style="padding-top: 1%;">
+				<h3 class="text-center">Our Team</h3>
+		</div>
+		<div class = "row">
+			<div class="col-md-6" style="padding-top: 1%;">
+			 <div class = "row">
+				<div class="col-md-6 text-center" style="padding-top: 1%;">
+					<img src= {{url_for('static', filename='SirMazhar.jpeg')}} class="rounded-circle mb-3" style="box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5); width:120px; height : 120px;">
+					<h6 class="text-center">Dr. Mazhar Ali</h6>
+				</div>
+				<div class="col-md-6 text-center" style="padding-top: 1%;">
+					<img src= {{url_for('static', filename='SirAliMuhammad.jpeg')}} class="rounded-circle mb-3" style="box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5); width:120px; height : 120px;">
+					<h6 class="text-center">Mr. Ali Muhammad</h6>
+				</div>
+			 </div>
+			</div>
+			
+			<div class="col-md-6" style="padding-top: 1%;">
+			 <div class = "row">
+				<div class="col-md-4 text-center" style="padding-top: 1%;">
+					<img src= {{url_for('static', filename='mohsin.jpeg')}}  class="rounded-circle mb-3" style="box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5); width:120px; height : 120px;">
+					<h6 class="text-center" >Muhammad Mohsin</h6>
+				</div>
+				<div class="col-md-4 text-center" style="padding-top: 1%;">
+					<img src= {{url_for('static', filename='salman.jpeg')}}  class="rounded-circle mb-3" style="box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5); width:120px; height : 120px;">
+					<h6 class="text-center" >Salman Abdul Rahim</h6>
+				</div>
+				<div class="col-md-4 text-center" style="padding-top: 1%;">
+					<img src= {{url_for('static', filename='zain.jpg')}}  class="rounded-circle mb-3" style="box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5); width:120px; height : 120px;">
+					<h6 class="text-center" >Zain Ul Abideen</h6>
+				</div>
+			 </div>
+			</div>
+			
+		</div>
+	</div>
+	
+	
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+
+</html>
