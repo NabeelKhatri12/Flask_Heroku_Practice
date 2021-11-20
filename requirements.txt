@@ -166,7 +166,6 @@ psutil==5.4.7
 py==1.6.0
 pyasn1==0.4.4
 pyasn1-modules==0.2.2
-PyAudio @ file:///C:/Users/HP/pipwin/PyAudio-0.2.11-cp37-cp37m-win_amd64.whl
 PyBluez==0.23
 pycodestyle==2.4.0
 pycosat==0.6.3
