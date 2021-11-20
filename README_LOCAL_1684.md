@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Brain Tumor Detection | Web App Demo (Flask) | Team Delta
 Brain Tumor Detection using Web App (Flask) that can classify if patient has brain tumor or not based on uploaded MRI image.
 
@@ -34,6 +33,3 @@ Click on image to play :point_down:
       Wait for few seconds till it shows like : ```Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)```
    7. Then open this URL in browser : http://127.0.0.1:5000/
    8. Voila :thumbsup:
-=======
-# Flask_Heroku_Practice
->>>>>>> 47792926f68b7803b0ffcb2b6a8f1d37d48f9775
