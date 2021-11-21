@@ -138,7 +138,7 @@ Send2Trash==1.5.0
 service-identity==17.0.0
 simplegeneric==0.8.1
 singledispatch==3.4.0.3
-six==1.15.0
+six>=1.15.0
 smart-open==5.2.1
 snowballstemmer==1.2.1
 snscrape==0.3.4
