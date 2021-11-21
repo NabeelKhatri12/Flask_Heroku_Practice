@@ -38,7 +38,7 @@
         </div>
     </nav>
 	
-	<div class="container mt-auto" style="padding-top: 2.5%;"> 
+	<div class="container mt-auto" style="padding-top: 2.5%;" id="Home"> 
 		<div class = "row">
 			<div class="col-md-2 text-center"" style="padding-top: 1%;">
 				<img src= {{url_for('static', filename='logo.png')}} align = "middle" width = "150px" height = "150px">
@@ -73,17 +73,21 @@
         <form id="upload-form" action="http://localhost:5000/upload" method="post" enctype="multipart/form-data">
             <div class="row mt-5">
                 <div class="col-md-2"></div>
-                <div class="col-md-8 justify-content-center center">
+                <div class="col-md-8 text-center">
 
-                    <h3 class="display-5 text-center">Upload MRI image of Brain: </h3>
+                    <h3 class=" text-center">Upload MRI image of Brain: </h3>
                     <!-- <input id="file-picker" type="file" name="file" accept="image/*" multiple> -->
-                    <input id="file-picker" type="file" name="file" accept="image/*" class="file-control col-md-6 d-flex justify-content-center" style="display: block; margin-left: auto; margin-right: auto; width: 40%;" required>
+					<div class="col-md-12 text-center" style="padding-left: 50px; margin-top: 40px;">
+						<input id="file-picker" type="file" name="file" accept="image/*" class="file-control" required>
+					</div>
                     <div id="msg"></div>
                     <div class="mt-5">
                         <button type="submit" class="btn btn-danger btn-lg btn-block col-md-8 mr-auto ml-auto" id="upload-button">Check Tumor Status</button>
-                    </div>
+					</div>
+				</div>
+			</div>
         </form>
-        </div>
+        
         <div class="col-md-2"></div>
         </div>
 

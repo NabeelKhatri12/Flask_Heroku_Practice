@@ -8,7 +8,12 @@
     <title>Brain Tumor Detection</title>    
     <link type="text/css" href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
+		<style>
+		html {
+		  scroll-behavior: smooth;
+		}
+		
+		</style>
 
 </head>
 
@@ -16,7 +21,8 @@
 <body class="bg-light">
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
-        <a class="navbar-brand" href="#">Brain Tumor Detection</a>
+        <!-- <a class="navbar-brand" href="#">Cancer Predictor and Detector</a> -->
+        <a class="navbar-brand" href="#" style= "font-size:24px;">Brain Tumor Detection</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -24,23 +30,64 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="./">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="./">Home </a>
+                </li>
+				<li class="nav-item">
+                    <a class="nav-link text-white" href="#team">Team <span class="sr-only">(current)</span></a>
                 </li>
             </ul>
         </div>
     </nav>
-    <div class="container">
+    <div class="container text-center">
 
         <h3 class="text-center display-3 mt-3 mb-3">Result</h3>
 		
 		
-        <img src="{{ image_name }}" alt = "No Image" height="300px" class="image-responsive align-center" style="display: block; margin-left: auto; margin-right: auto; width: 25%;">
+        <img src="{{ image_name }}" alt = "No Image" height="300px" class="image-responsive align-center text-center">
 
         {% if predvalue %}
-        <h4 class="text-left display-5 text-center pt-3">Result: <span style="color:red;">Brain Tumor detected!!!</span></h4> {% else %}
-        <h4 class="text-left display-5 text-center pt-3">Result: <span style="color:green;">No Brain Tumor</span></h4> {% endif %}
+        <h4 class="text-left display-5 text-center pt-3 mb-5">Result: <span style="color:red;">Brain Tumor detected!!!</span></h4> {% else %}
+        <h4 class="text-left display-5 text-center pt-3 mb-5">Result: <span style="color:green;">No Brain Tumor</span></h4> {% endif %}
 
     </div>
+	
+	<div class="container-fluid bg-danger text-white" id="team" style="margin-left: 0%; margin-top: 2.5%; padding-top: 2.5%; padding-bottom: 2.5%;"> 
+		<div class="" style="padding-top: 1%;">
+				<h3 class="text-center">Our Team</h3>
+		</div>
+		<div class = "row">
+			<div class="col-md-6" style="padding-top: 1%;">
+			 <div class = "row">
+				<div class="col-md-6 text-center" style="padding-top: 1%;">
+					<img src= {{url_for('static', filename='SirMazhar.jpeg')}} class="rounded-circle mb-3" style="box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5); width:120px; height : 120px;">
+					<h6 class="text-center">Dr. Mazhar Ali</h6>
+				</div>
+				<div class="col-md-6 text-center" style="padding-top: 1%;">
+					<img src= {{url_for('static', filename='SirAliMuhammad.jpeg')}} class="rounded-circle mb-3" style="box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5); width:120px; height : 120px;">
+					<h6 class="text-center">Mr. Ali Muhammad</h6>
+				</div>
+			 </div>
+			</div>
+			
+			<div class="col-md-6" style="padding-top: 1%;">
+			 <div class = "row">
+				<div class="col-md-4 text-center" style="padding-top: 1%;">
+					<img src= {{url_for('static', filename='mohsin.jpeg')}}  class="rounded-circle mb-3" style="box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5); width:120px; height : 120px;">
+					<h6 class="text-center" >Muhammad Mohsin</h6>
+				</div>
+				<div class="col-md-4 text-center" style="padding-top: 1%;">
+					<img src= {{url_for('static', filename='salman.jpeg')}}  class="rounded-circle mb-3" style="box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5); width:120px; height : 120px;">
+					<h6 class="text-center" >Salman Abdul Rahim</h6>
+				</div>
+				<div class="col-md-4 text-center" style="padding-top: 1%;">
+					<img src= {{url_for('static', filename='zain.jpg')}}  class="rounded-circle mb-3" style="box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5); width:120px; height : 120px;">
+					<h6 class="text-center" >Zain Ul Abideen</h6>
+				</div>
+			 </div>
+			</div>
+			
+		</div>
+	</div>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
