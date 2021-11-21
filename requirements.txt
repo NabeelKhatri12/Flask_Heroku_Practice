@@ -101,7 +101,6 @@ pylint==2.1.1
 pyodbc==4.0.24
 pyOpenSSL==18.0.0
 pyparsing==2.2.0
-pypiwin32==223
 pyppeteer==0.2.6
 PyPrind==2.11.3
 pyquery==1.4.3
@@ -118,7 +117,6 @@ python-dateutil==2.7.3
 pyttsx3==2.90
 pytz==2018.5
 pywinpty==0.5.4
-pywin32==223
 PyYAML==3.13
 pyzmq==17.1.2
 QtAwesome==0.4.4
