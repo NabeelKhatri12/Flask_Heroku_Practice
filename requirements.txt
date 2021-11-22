@@ -167,7 +167,6 @@ psutil==5.4.7
 py==1.6.0
 pyasn1==0.4.4
 pyasn1-modules==0.2.2
-PyAudio @ file:///C:/Users/HP/pipwin/PyAudio-0.2.11-cp37-cp37m-win_amd64.whl
 PyAutoGUI==0.9.53
 PyBluez==0.23
 pycodestyle==2.4.0
@@ -251,10 +250,10 @@ statsmodels==0.9.0
 sympy==1.1.1
 tables==3.4.4
 tblib==1.3.2
-tensorboard==2.0.2
+tensorboard==2.7.0
 tensorboard-plugin-wit==1.8.0
 tensorflow==2.0.0
-tensorflow-estimator==2.0.1
+tensorflow-estimator==2.7.0
 termcolor==1.1.0
 terminado==0.8.1
 testpath==0.3.1
