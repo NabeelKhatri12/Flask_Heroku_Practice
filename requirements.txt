@@ -192,7 +192,7 @@ python-dateutil==2.7.3
 pyttsx3==2.90
 pytweening==1.0.4
 pytz==2018.5
-PyWavelets==1.0.0
+PyWavelets==1.2.0
 pywinpty==0.5.4
 PyYAML==3.13
 pyzmq==17.1.2
